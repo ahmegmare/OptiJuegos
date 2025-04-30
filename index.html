@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+  <meta charset="UTF-8">
+  <title>منظم المهام</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>📋 منظم المهام اليومية</h1>
+
+  <div class="task-input">
+    <input type="text" id="taskText" placeholder="أدخل المهمة هنا">
+    <button onclick="addTask()">➕ أضف</button>
+  </div>
+
+  <div class="task-columns">
+    <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h2>📝 قيد التنفيذ</h2>
+      <div id="todo" class="task-list"></div>
+    </div>
+
+    <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h2>✅ مكتملة</h2>
+      <div id="done" class="task-list"></div>
+    </div>
+
+    <div class="column" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <h2>⏳ مؤجلة</h2>
+      <div id="delayed" class="task-list"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
